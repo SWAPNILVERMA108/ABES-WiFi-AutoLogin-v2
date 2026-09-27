@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ABES-EC Wi-Fi Auto Login",
+  "version": "2.0.0",
+  "description": "Automatically fills and submits the ABES-EC Internet Service Portal.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://192.168.1.254:8090/*"
+      ],
+      "js": [
+        "config.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://192.168.1.254:8090/*"
+  ]
+}
